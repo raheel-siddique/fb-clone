@@ -3,7 +3,7 @@ import React from "react";
 const App = () => {
   return (
     <>
-      <h1> lets Start facebook Clone</h1>
+      <p> lets Start facebook Clone</p>
     </>
   );
 };
