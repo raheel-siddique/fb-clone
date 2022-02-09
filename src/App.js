@@ -1,10 +1,8 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import "./App.css";
 
 const App = () => {
-  return (
-    <>
-      <p> lets Start facebook Clone</p>
-    </>
-  );
+  return <>{/* header */ <Navbar />}</>;
 };
 export default App;
