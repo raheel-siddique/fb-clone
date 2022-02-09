@@ -1,0 +1,12 @@
+.paraprofile {
+  margin-right: 130px;
+  margin-top: 5px;
+  font-size: 18px;
+}
+.paperscroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* .forscroll {
+  overflow: auto;
+} */
