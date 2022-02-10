@@ -1,5 +1,6 @@
 import React from "react";
 import AddStory from "./AddStory";
+import CreatePost from "./Createpost";
 
 const Story = () => {
   const dataStory = [
@@ -37,6 +38,7 @@ const Story = () => {
   return (
     <>
       <AddStory dataStory={dataStory} />
+      <CreatePost />
     </>
   );
 };

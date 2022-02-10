@@ -1,3 +1,14 @@
 /* .story_avatar {
   border: 1px solid red;
 } */
+.searchbarcreatePost {
+  text-indent: 30px;
+  background-color: #f2f2f3;
+  width: 540px;
+  height: 40px;
+  position: relative;
+  left: 10px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 20px;
+}
