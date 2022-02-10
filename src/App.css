@@ -15,6 +15,13 @@ body {
   border: 1px solid white;
   border-radius: 20px;
 }
+.App_div {
+  display: flex;
+  justify-content: flex-start;
+}
+.story_story {
+  margin-left: 100px;
+}
 /* .serachicon {
   position: relative;
   bottom: 20px;
