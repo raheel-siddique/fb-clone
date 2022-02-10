@@ -7,6 +7,12 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+.listietms:hover {
+  background-color: rgb(218, 215, 215);
+  cursor: pointer;
+
+  /* color: white; */
+}
 /* .forscroll {
   overflow: auto;
 } */

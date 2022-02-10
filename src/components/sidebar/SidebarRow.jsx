@@ -15,7 +15,7 @@ const SidebarRow = ({ dataSideBar }) => {
       <List
         sx={{
           width: "100%",
-          maxWidth: 360,
+          maxWidth: 320,
           bgcolor: "#EBEDF0",
         }}
       >
@@ -28,12 +28,12 @@ const SidebarRow = ({ dataSideBar }) => {
             style={{ position: "relative", top: 10 }}
           />
         </ListItem>
-        <Divider variant="inset" component="li" />
+        {/* <Divider variant="inset" component="li" /> */}
         <Paper className="paperscroll">
           {dataSideBar.map((data) => {
             return (
               <>
-                <ListItem alignItems="flex-start">
+                <ListItem className="listietms" alignItems="flex-start">
                   <div>{data.icon}</div>
                   <ListItemText
                     primary={data.name}
@@ -41,12 +41,11 @@ const SidebarRow = ({ dataSideBar }) => {
                       position: "relative",
                       top: 2,
                       left: 20,
-                      color: "blue",
                     }}
                   />
                 </ListItem>
 
-                <Divider variant="inset" component="li" />
+                {/* <Divider variant="inset" component="li" /> */}
               </>
             );
           })}
