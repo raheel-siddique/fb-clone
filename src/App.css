@@ -29,7 +29,7 @@ body {
   color: #282c34;
 } */
 ::placeholder {
-  color: #aaabac;
+  color: rgb(105, 104, 104);
   text-indent: 30px;
 }
 

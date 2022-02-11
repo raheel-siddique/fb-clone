@@ -7,6 +7,10 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
+import PhotoIcon from "@mui/icons-material/Photo";
+import MoodIcon from "@mui/icons-material/Mood";
+import "./Story.css";
 
 const CreatePost = () => {
   return (
@@ -19,7 +23,7 @@ const CreatePost = () => {
               <input
                 type="text"
                 className="searchbarcreatePost"
-                placeholder="Search Here"
+                placeholder="Whats On Your Mind Raheel??"
               />
             </div>
             <div
@@ -28,16 +32,43 @@ const CreatePost = () => {
             >
               {" "}
               <div className="livevideodiv">
-                <VideocamIcon fontSize="large" />
-                <p>Live Video</p>{" "}
+                <Button>
+                  {" "}
+                  <VideocamIcon fontSize="large" style={{ color: "red" }} />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
+                  >
+                    {" "}
+                    Live Video
+                  </span>
+                </Button>
               </div>
               <div className="livevideodiv">
-                <VideocamIcon fontSize="large" />
-                <p>Live Video</p>{" "}
+                <Button>
+                  {" "}
+                  <PhotoIcon fontSize="large" style={{ color: "#00A400" }} />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
+                  >
+                    {" "}
+                    Photo/Video
+                  </span>
+                </Button>
               </div>
               <div className="livevideodiv">
-                <VideocamIcon fontSize="large" />
-                <p>Live Video</p>{" "}
+                <Button>
+                  {" "}
+                  <MoodIcon fontSize="large" style={{ color: "#F5C33B" }} />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
+                  >
+                    {" "}
+                    Feeling / Activity
+                  </span>
+                </Button>
               </div>
             </div>
           </CardContent>
