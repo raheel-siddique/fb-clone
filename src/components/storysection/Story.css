@@ -4,13 +4,27 @@
 .searchbarcreatePost {
   text-indent: 30px;
   background-color: #f2f2f3;
-  width: 540px;
+  width: 340px;
   height: 45px;
   position: relative;
   left: 10px;
   outline: none;
   border: 1px solid white;
   border-radius: 20px;
+}
+.searchbarcreatePostImageUrl {
+  text-indent: 30px;
+  background-color: #f2f2f3;
+  width: 170px;
+  height: 45px;
+  position: relative;
+  left: 10px;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+.searchbarcreatePostImageUrl::placeholder {
+  color: rgb(120, 133, 252);
 }
 .livevideodiv {
   display: flex;
@@ -19,4 +33,7 @@
 }
 .livevideodiv:hover {
   cursor: pointer;
+}
+.hiddenBtn {
+  display: none;
 }

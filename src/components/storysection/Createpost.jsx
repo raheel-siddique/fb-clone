@@ -11,61 +11,92 @@ import AddPhotoAlternateIcon from "@mui/icons-material/AddPhotoAlternate";
 import PhotoIcon from "@mui/icons-material/Photo";
 import MoodIcon from "@mui/icons-material/Mood";
 import "./Story.css";
+import { useState } from "react";
 
 const CreatePost = () => {
+  const [inputSeacrh, setInputSearch] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setInputSearch("");
+    console.log("data values" + inputSeacrh);
+  };
   return (
     <>
       <Grid container>
-        <Card sx={{ minWidth: 620, marginLeft: 12, marginTop: 5 }}>
+        <Card sx={{ minWidth: 620, marginLeft: 8, marginTop: 5 }}>
           <CardContent>
-            <div style={{ display: "flex" }}>
-              <Avatar src="raheel.jpg" />
+            <div style={{ display: "flex", position: "relative", top: 5 }}>
+              <Avatar
+                src="raheel.jpg"
+                style={{ position: "relative", top: 3 }}
+              />
               <input
                 type="text"
                 className="searchbarcreatePost"
+                value={inputSeacrh}
+                onChange={(event) => {
+                  setInputSearch(event.target.value);
+                }}
                 placeholder="Whats On Your Mind Raheel??"
               />
+              <input
+                type="text"
+                className="searchbarcreatePostImageUrl"
+                value={inputSeacrh}
+                onChange={(event) => {
+                  setInputSearch(event.target.value);
+                }}
+                placeholder="Url Of image"
+              />
+              <Button
+                onClick={handleSubmit}
+                type="submit"
+                className="hiddenBtn"
+                variant="contained"
+                style={{
+                  borderRadius: 20,
+                  marginLeft: 20,
+                  textTransform: "capitalize",
+                }}
+                // rounded
+                // style={{ display: "none" }}
+              >
+                Upload
+              </Button>
             </div>
             <div
               className=""
-              style={{ display: "flex", justifyContent: "space-around" }}
+              style={{ display: "flex", justifyContent: "space-between" }}
             >
-              {" "}
               <div className="livevideodiv">
                 <Button>
-                  {" "}
                   <VideocamIcon fontSize="large" style={{ color: "red" }} />
                   <span
                     className="textvideo"
                     style={{ position: "relative", left: 5 }}
                   >
-                    {" "}
                     Live Video
                   </span>
                 </Button>
               </div>
               <div className="livevideodiv">
                 <Button>
-                  {" "}
                   <PhotoIcon fontSize="large" style={{ color: "#00A400" }} />
                   <span
                     className="textvideo"
                     style={{ position: "relative", left: 5 }}
                   >
-                    {" "}
                     Photo/Video
                   </span>
                 </Button>
               </div>
               <div className="livevideodiv">
                 <Button>
-                  {" "}
                   <MoodIcon fontSize="large" style={{ color: "#F5C33B" }} />
                   <span
                     className="textvideo"
                     style={{ position: "relative", left: 5 }}
                   >
-                    {" "}
                     Feeling / Activity
                   </span>
                 </Button>
