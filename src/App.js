@@ -9,10 +9,13 @@ const App = () => {
     <>
       <Navbar />
       <div className="App_div">
-        <div className="side_bar">
+        <div style={{ position: "relative", top: 70 }} className="side_bar">
           <Sidebar />
         </div>
-        <div className="story_story">
+        <div
+          style={{ position: "relative", left: 300, top: 100 }}
+          className="story_story"
+        >
           <Story />
         </div>
       </div>

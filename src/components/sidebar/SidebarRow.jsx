@@ -17,6 +17,7 @@ const SidebarRow = ({ dataSideBar }) => {
           width: 300,
           // maxWidth: 30,
           bgcolor: "#EBEDF0",
+          position: "fixed",
         }}
       >
         <ListItem alignItems="flex-start">
