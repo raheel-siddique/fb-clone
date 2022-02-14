@@ -23,7 +23,7 @@ const CreatePost = () => {
   return (
     <>
       <Grid container>
-        <Card sx={{ minWidth: 620, marginLeft: 8, marginTop: 5 }}>
+        <Card sx={{ maxWidth: 600, marginLeft: 8, marginTop: 5 }}>
           <CardContent>
             <div style={{ display: "flex", position: "relative", top: 5 }}>
               <Avatar
