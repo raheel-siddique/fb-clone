@@ -1,0 +1,19 @@
+.img_fluidmy {
+  width: 140px;
+  height: 140px;
+}
+.loginmaindiv {
+  margin-left: 620px;
+  margin-top: 100px;
+}
+.headfb {
+  color: rgb(1, 1, 128);
+  font-weight: bold;
+
+  /* margin-left: 10px; */
+}
+.btnfb {
+  position: relative;
+  right: 53px;
+  top: 50px;
+}

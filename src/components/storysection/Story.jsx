@@ -78,9 +78,11 @@ const Story = () => {
 
   return (
     <>
-      <AddStory dataStory={dataStory} />
-      <CreatePost />
-      <ViewPost postData={postData} />
+      <div>
+        <AddStory dataStory={dataStory} />
+        <CreatePost />
+        <ViewPost postData={postData} />
+      </div>
     </>
   );
 };

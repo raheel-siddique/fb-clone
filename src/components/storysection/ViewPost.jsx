@@ -44,11 +44,12 @@ const ViewPost = ({ postData }) => {
                   <p className="statuspara">{posts.postPara}</p>
                   <div>
                     <img
+                      //   className="img-fluid"
                       src={posts.avatarSrc}
                       alt=""
                       style={{
                         height: "85vh",
-                        width: "110vh",
+                        width: "100vh",
                         position: "relative",
                         right: 16,
                       }}
