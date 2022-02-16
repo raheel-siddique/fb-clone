@@ -3,34 +3,18 @@ import React from "react";
 // import { initializeApp } from "firebase/app";
 
 import "./Login.css";
-import { auth, provider } from "../firebase/firebase";
+// import { auth, provider } from "../firebase/firebase";
 // import provider from "../firebase/firebase";
-const Login = () => {
-  const signIn = () => {
-    auth
-      .signInWithPopup(provider)
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => alert(error.message));
+const Login = ({ signIn }) => {
+  //   const signIn = () => {
+  //     auth
+  //       .signInWithPopup(provider)
+  //       .then((result) => {
+  //         console.log(result);
+  //       })
+  //       .catch((error) => alert(error.message));
 
-    // auth
-    //   .signInWithPopup(provider)
-    //   .then((result) => {
-    //     console.log(result);
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.message);
-    //   });
-    // auth
-    //   .signInWithPopup(provider)
-    //   .then((result) => {
-    //     console.log(result);
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //   });
-  };
+  //   };
   return (
     <>
       <div className="loginmaindiv">

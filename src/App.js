@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import Story from "./components/storysection/Story";
 import ShowFriends from "./components/friendssection/ShowFriends";
 import Login from "./components/auth/Login";
+import { auth, provider } from "./components/firebase/firebase";
 
 const App = () => {
-  var user = prompt("whats your name");
+  const [userMy, setUserMy] = useState("");
+  const signIn = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result.user);
+        setUserMy(result.user);
+      })
+      .catch((error) => alert(error.message));
+  };
+  // var user = prom
   return (
     <>
-      {!user ? (
-        <Login />
+      {!userMy ? (
+        <Login signIn={signIn} />
       ) : (
         <>
           <Navbar />
