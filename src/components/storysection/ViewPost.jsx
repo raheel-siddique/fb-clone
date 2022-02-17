@@ -32,23 +32,29 @@ const ViewPost = ({ image, profilePic, message, username }) => {
                 marginBottom: 10,
               }}
             >
-              <Avatar src={image} style={{ position: "relative", top: 3 }} />
+              <Avatar
+                src={profilePic}
+                style={{ position: "relative", top: 3 }}
+              />
               <p className="postNameUser">{username}</p>
             </div>
             <p className="statuspara">{message}</p>
-            <div>
-              <img
-                //   className="img-fluid"
-                src={profilePic}
-                alt=""
-                style={{
-                  height: "85vh",
-                  width: "100vh",
-                  position: "relative",
-                  right: 16,
-                }}
-              />
-            </div>
+
+            {image && (
+              <div>
+                <img
+                  //   className="img-fluid"
+                  src={image}
+                  alt=""
+                  style={{
+                    height: "85vh",
+                    width: "100vh",
+                    position: "relative",
+                    right: 16,
+                  }}
+                />
+              </div>
+            )}
 
             <div
               className=""

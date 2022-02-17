@@ -4,7 +4,7 @@ import AddStory from "./AddStory";
 import CreatePost from "./Createpost";
 import ViewPost from "./ViewPost";
 
-const Story = () => {
+const Story = ({ userMy }) => {
   const [posts, setPosts] = useState([]);
   useEffect(() => {
     db.collection("posts").onSnapshot((snapshot) =>
@@ -87,7 +87,7 @@ const Story = () => {
     <>
       <div>
         <AddStory dataStory={dataStory} />
-        <CreatePost />
+        <CreatePost userMy={userMy} />
         {posts.map((post) => {
           return (
             <>

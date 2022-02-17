@@ -12,13 +12,24 @@ import PhotoIcon from "@mui/icons-material/Photo";
 import MoodIcon from "@mui/icons-material/Mood";
 import "./Story.css";
 import { useState } from "react";
+import db from "../firebase/firebase";
 
-const CreatePost = () => {
+const CreatePost = ({ userMy }) => {
   const [inputSeacrh, setInputSearch] = useState("");
+  const [inputImage, setInputImage] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    db.collection("posts").add({
+      username: userMy.displayName,
+      message: inputSeacrh,
+      profilePic: userMy.photoURL,
+      image: inputImage,
+    });
     setInputSearch("");
-    console.log("data values" + inputSeacrh);
+    setInputImage("");
+    console.log("data values" + inputSeacrh, inputImage);
   };
   return (
     <>
@@ -27,7 +38,7 @@ const CreatePost = () => {
           <CardContent>
             <div style={{ display: "flex", position: "relative", top: 5 }}>
               <Avatar
-                src="raheel.jpg"
+                src={userMy.photoURL}
                 style={{ position: "relative", top: 3 }}
               />
               <input
@@ -42,9 +53,9 @@ const CreatePost = () => {
               <input
                 type="text"
                 className="searchbarcreatePostImageUrl"
-                value={inputSeacrh}
+                value={inputImage}
                 onChange={(event) => {
-                  setInputSearch(event.target.value);
+                  setInputImage(event.target.value);
                 }}
                 placeholder="Url Of image"
               />

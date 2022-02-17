@@ -34,7 +34,7 @@ const App = () => {
               style={{ position: "relative", left: 300, top: 100 }}
               className="story_story"
             >
-              <Story />
+              <Story userMy={userMy} />
             </div>
           </div>
         </>
