@@ -25,10 +25,10 @@ const App = () => {
         <Login signIn={signIn} />
       ) : (
         <>
-          <Navbar />
+          <Navbar userMy={userMy} />
           <div className="App_div">
             <div style={{ position: "relative", top: 70 }} className="side_bar">
-              <Sidebar />
+              <Sidebar userMy={userMy} />
             </div>
             <div
               style={{ position: "relative", left: 300, top: 100 }}

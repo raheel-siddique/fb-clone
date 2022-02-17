@@ -64,7 +64,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const Navbar = () => {
+const Navbar = ({ userMy }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -293,6 +293,7 @@ const Navbar = () => {
                   <NotificationsIcon fontSize="large" sx={{ color: "blue" }} />
                 </Badge>
               </IconButton>
+              {/* <h1 style={{ color: "red" }}>{userMy.displayName}</h1> */}
               <IconButton
                 sx={{ mr: 2 }}
                 size="large"

@@ -9,7 +9,7 @@ import Avatar from "@mui/material/Avatar";
 
 import { Paper } from "@mui/material";
 
-const SidebarRow = ({ dataSideBar }) => {
+const SidebarRow = ({ dataSideBar, userMy }) => {
   return (
     <>
       <List
@@ -22,10 +22,10 @@ const SidebarRow = ({ dataSideBar }) => {
       >
         <ListItem alignItems="flex-start">
           <ListItemAvatar>
-            <Avatar alt="Remy Sharp " src="\raheel.jpg" />
+            <Avatar alt="Remy Sharp " src={userMy.photoURL} />
           </ListItemAvatar>
           <ListItemText
-            primary="Raheel Siddique"
+            primary={userMy.displayName}
             style={{ position: "relative", top: 10 }}
           />
         </ListItem>

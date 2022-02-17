@@ -14,7 +14,7 @@ import BusAlertIcon from "@mui/icons-material/BusAlert";
 import HealthAndSafetyIcon from "@mui/icons-material/HealthAndSafety";
 import HubIcon from "@mui/icons-material/Hub";
 
-const Sidebar = () => {
+const Sidebar = ({ userMy }) => {
   const dataSideBar = [
     {
       id: 1,
@@ -69,7 +69,7 @@ const Sidebar = () => {
   ];
   return (
     <>
-      <SidebarRow dataSideBar={dataSideBar} />
+      <SidebarRow dataSideBar={dataSideBar} userMy={userMy} />
     </>
   );
 };

@@ -17,97 +17,89 @@ import ListItemText from "@mui/material/ListItemText";
 
 import "./Story.css";
 
-const ViewPost = ({ postData }) => {
+const ViewPost = ({ image, profilePic, message, username }) => {
   return (
     <>
       {" "}
       <Grid container>
-        {postData.map((posts) => {
-          return (
-            <>
-              <Card sx={{ maxWidth: 600, marginLeft: 8, marginTop: 5 }}>
-                <CardContent>
-                  <div
-                    style={{
-                      display: "flex",
-                      position: "relative",
-                      top: 5,
-                      marginBottom: 10,
-                    }}
-                  >
-                    <Avatar
-                      src="raheel.jpg"
-                      style={{ position: "relative", top: 3 }}
-                    />
-                    <p className="postNameUser">{posts.name}</p>
-                  </div>
-                  <p className="statuspara">{posts.postPara}</p>
-                  <div>
-                    <img
-                      //   className="img-fluid"
-                      src={posts.avatarSrc}
-                      alt=""
-                      style={{
-                        height: "85vh",
-                        width: "100vh",
-                        position: "relative",
-                        right: 16,
-                      }}
-                    />
-                  </div>
+        <Card sx={{ maxWidth: 600, marginLeft: 8, marginTop: 5 }}>
+          <CardContent>
+            <div
+              style={{
+                display: "flex",
+                position: "relative",
+                top: 5,
+                marginBottom: 10,
+              }}
+            >
+              <Avatar src={image} style={{ position: "relative", top: 3 }} />
+              <p className="postNameUser">{username}</p>
+            </div>
+            <p className="statuspara">{message}</p>
+            <div>
+              <img
+                //   className="img-fluid"
+                src={profilePic}
+                alt=""
+                style={{
+                  height: "85vh",
+                  width: "100vh",
+                  position: "relative",
+                  right: 16,
+                }}
+              />
+            </div>
 
-                  <div
-                    className=""
-                    style={{ display: "flex", justifyContent: "space-around" }}
+            <div
+              className=""
+              style={{ display: "flex", justifyContent: "space-around" }}
+            >
+              <div className="livevideodiv">
+                <Button>
+                  <ThumbUpOutlinedIcon
+                  // fontSize="large"
+                  // style={{ color: "red" }}
+                  />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
                   >
-                    <div className="livevideodiv">
-                      <Button>
-                        <ThumbUpOutlinedIcon
-                        // fontSize="large"
-                        // style={{ color: "red" }}
-                        />
-                        <span
-                          className="textvideo"
-                          style={{ position: "relative", left: 5 }}
-                        >
-                          like
-                        </span>
-                      </Button>
-                    </div>
-                    <div className="livevideodiv">
-                      <Button>
-                        <ChatBubbleOutlineOutlinedIcon
-                        // fontSize="large"
-                        // style={{ color: "red" }}
-                        />
-                        <span
-                          className="textvideo"
-                          style={{ position: "relative", left: 5 }}
-                        >
-                          Comment
-                        </span>
-                      </Button>
-                    </div>
-                    <div className="livevideodiv">
-                      <Button>
-                        <ReplyOutlinedIcon
-                        // fontSize="large"
-                        // style={{ color: "red" }}
-                        />
-                        <span
-                          className="textvideo"
-                          style={{ position: "relative", left: 5 }}
-                        >
-                          Share
-                        </span>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </>
-          );
-        })}
+                    like
+                  </span>
+                </Button>
+              </div>
+              <div className="livevideodiv">
+                <Button>
+                  <ChatBubbleOutlineOutlinedIcon
+                  // fontSize="large"
+                  // style={{ color: "red" }}
+                  />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
+                  >
+                    Comment
+                  </span>
+                </Button>
+              </div>
+              <div className="livevideodiv">
+                <Button>
+                  <ReplyOutlinedIcon
+                  // fontSize="large"
+                  // style={{ color: "red" }}
+                  />
+                  <span
+                    className="textvideo"
+                    style={{ position: "relative", left: 5 }}
+                  >
+                    Share
+                  </span>
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
         {/* <Card sx={{ maxWidth: 600, marginLeft: 8, marginTop: 5 }}>
           <CardContent>
             <div
